@@ -1,5 +1,5 @@
 class Grid
-
+    #initialize grid
     def initialize(gridSize)
         @gridSize = gridSize
         @maxDifference = 0
@@ -31,7 +31,6 @@ class Grid
             outerCounter += 1
         end
     end
-
 
     def hot_plate()
         cycle_max_diff = 0
