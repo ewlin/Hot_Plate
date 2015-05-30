@@ -41,23 +41,23 @@ class Grid
                     if @grid[i][j] == 0
                         newValue = 0
                     else
-                        newValue = (((@grid[i][j-1] + @grid[i+1][j] + @grid[i][j+1])/3.to_f).round(2))
+                        newValue = (((@grid[i][j-1] + @grid[i+1][j] + @grid[i][j+1])/3.to_f).round(5))
                     end
                 elsif i == (@gridSize-1)
                     if @grid[i][j] == 0
                         newValue = 0
                     else
-                        newValue = (((@grid[i][j-1] + @grid[i-1][j] + @grid[i][j+1])/3.to_f).round(2))
+                        newValue = (((@grid[i][j-1] + @grid[i-1][j] + @grid[i][j+1])/3.to_f).round(5))
                     end
                 else
                     if @grid[i][j] == 100
                         newValue = 100
                     elsif j == 0
-                        newValue = (((@grid[i-1][j] + @grid[i+1][j] + @grid[i][j+1])/3.to_f).round(2))
+                        newValue = (((@grid[i-1][j] + @grid[i+1][j] + @grid[i][j+1])/3.to_f).round(5))
                     elsif j == (@gridSize-1)
-                        newValue = (((@grid[i-1][j] + @grid[i+1][j] + @grid[i][j-1])/3.to_f).round(2))
+                        newValue = (((@grid[i-1][j] + @grid[i+1][j] + @grid[i][j-1])/3.to_f).round(5))
                     else
-                        newValue = (((@grid[i-1][j] + @grid[i+1][j] + @grid[i][j-1] + @grid[i][j+1])/4.to_f).round(2))
+                        newValue = (((@grid[i-1][j] + @grid[i+1][j] + @grid[i][j-1] + @grid[i][j+1])/4.to_f).round(5))
                     end
                 end
 
